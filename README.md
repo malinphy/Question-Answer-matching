@@ -1,13 +1,16 @@
-# quick_response_gen
-
+# Respones Gerenerator
+Overview :<br/>
 Tensorflow/Keras implementation of Question answer matching system. In short, this project is designed for finding the best possible answers for related questions.
-</br>
+<!-- </br> -->
 During the learning process, each question and answer were vectorized using the same Universal sentence encoder.<br/> Additional negative sample generated for each question and answer pair. 
-<br/>Questions, answers and negative were trained using siamese-BERT structure with triplet ranking loss. 
+<!-- <br/> -->
+Questions, answers and negative were trained using siamese-BERT structure with triplet ranking loss. 
 Questions, answers and negative were treated as anchor, positive and negative terms respectively. Purpose of this method is  minimizing the distance between anchor and positive pair, in the mean time maximizing the distance between anchor and negative pair.
-<br/> After training, questionas and corresponding answers were vectorized using trained sentence encoder. 
-<br/> Vector values of each answer, loaded in vector similarity search library (scaNN).
-<br/> In prediction process, test question is vectorized using trained sentence encoder and using the vector similarity search, closest answer will be returned. User, does not have query exactly same question but another question can be used with the same or close meaning. Trained sentence encoder will vectorize the question and generate the close values to exact question in vector space. Sample process can be seen in example.
+<!-- <br/> -->After training, questionas and corresponding answers were vectorized using trained sentence encoder. 
+<!-- <br/> -->
+Vector values of each answer, loaded in vector similarity search library (scaNN).
+<!-- <br/> -->
+In prediction process, test question is vectorized using trained sentence encoder and using the vector similarity search, closest answer will be returned. User, does not have query exactly same question but another question can be used with the same or close meaning. Trained sentence encoder will vectorize the question and generate the close values to exact question in vector space. Sample process can be seen in example.
 
 Data :<br/>
 ----
