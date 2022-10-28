@@ -2,10 +2,8 @@
 Overview :<br/>
 Tensorflow/Keras implementation of Question answer matching system. In short, this project is designed for finding the best possible answers for related questions.
 <!-- </br> -->
-During the learning process, each question and answer were vectorized using the same Universal sentence encoder.<br/> Additional negative sample generated for each question and answer pair. 
-<!-- <br/> -->
-Questions, answers and negative were trained using siamese-BERT structure with triplet ranking loss. 
-Questions, answers and negative were treated as anchor, positive and negative terms respectively. Purpose of this method is  minimizing the distance between anchor and positive pair, in the mean time maximizing the distance between anchor and negative pair.
+During the learning process, each question and answer were vectorized using the same Universal sentence encoder.<br/> Additional negative sample generated for each question and answer pair. Questions, answers and negative sentences were trained using siamese-BERT structure with triplet ranking loss. 
+Questions, answers and negative sentences were treated as anchor, positive and negative terms respectively. Purpose of this method is  minimizing the distance between anchor and positive pairs, while maximizing the distance between anchor and negative pairs.
 <!-- <br/> -->After training, questionas and corresponding answers were vectorized using trained sentence encoder. 
 <!-- <br/> -->
 Vector values of each answer, loaded in vector similarity search library (scaNN).
