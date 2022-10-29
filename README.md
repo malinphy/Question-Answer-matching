@@ -1,14 +1,36 @@
 # Response Generator
-Overview :<br/>
-Tensorflow/Keras implementation of Question answer matching system. In short, this project is designed for finding the best possible answers for related questions.
-<!-- </br> -->
-During the learning process, each question and answer were vectorized using the same Universal sentence encoder.<br/> Additional negative sample generated for each question and answer pair. Questions, answers and negative sentences were trained using siamese-BERT structure with triplet ranking loss. 
-Questions, answers and negative sentences were treated as anchor, positive and negative terms respectively. Purpose of this method is  minimizing the distance between anchor and positive pairs, while maximizing the distance between anchor and negative pairs.
-<!-- <br/> -->After training, questionas and corresponding answers were vectorized using trained sentence encoder. 
-<!-- <br/> -->
-Vector values of each answer, loaded in vector similarity search library (scaNN).
-<!-- <br/> -->
-In prediction process, test question is vectorized using trained sentence encoder and using the vector similarity search, closest answer will be returned. User, does not have query exactly same question but another question can be used with the same or close meaning. Trained sentence encoder will vectorize the question and generate the close values to exact question in vector space. Sample process can be seen in example.
+
+Overview :
+Tensorflow/Keras implementation of Question answer matching system. 
+In short, this project is designed for finding the best possible 
+answers for related questions. 
+
+
+Universal Sentence Encoder (USE) is the back bone of this system.
+USE uses the pretrained BERT to generate sentence embeddings. In 
+dataset, each question is paired with a correspondings answer.
+For each answer one random negative sample created. Questions, 
+answers and negative sentences were treated as anchor, positive 
+and negative samples respectively. VEctor values of questions,
+positive and negative samples were extracted using USE. 
+Employing the triplet loss, distance between anchor
+and corresponding positive vectors is minimized,
+while increase the distance between anchor and negative vectors.
+In this way, pre-trained USE has been fine tuned for question-
+mathcing system. 
+
+In question matching models, question-answer dataset is composed of 
+paraphrased version of same question or question form of 
+corresponding answer to reduce number new sentences for prediction
+process. However, fine tuned USE is capable of generate embeddings 
+which already capture meaning and context. The fine-tuned USE can 
+vectorize the user-given question, placing it close to the same-
+meaning question in the trained dataset.
+
+For simplicity, every vectorized answer can be stored in a vector
+database such as ScaNN. During the prediction, user given question
+is vectorized using fine tuned USe and closest vector can be 
+extracted from vector database and returned to to user as answer.
 
 Data :<br/>
 ----
