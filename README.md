@@ -1,4 +1,4 @@
-# Respones Gerenerator
+# Response Generator
 Overview :<br/>
 Tensorflow/Keras implementation of Question answer matching system. In short, this project is designed for finding the best possible answers for related questions.
 <!-- </br> -->
