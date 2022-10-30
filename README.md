@@ -1,4 +1,4 @@
-# Response Generator
+#  Question Answer Matching with Universal Sentence Encoders(USE)
 
 Overview :
 Tensorflow/Keras implementation of Question answer matching system. 
