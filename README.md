@@ -84,4 +84,4 @@ EXAMPLE
 'Bush' is a more general term for any plant with multiple stems rising from the ground, and that can be either woody or what's called herbaceous, herbaceous plants are ones where the stems die back completely or substantially in the winter leaving the plant with just its roots and new stems grow next spring.
 
 
-## Note: Vector Similarity Search (ScaNN) has suitable distribution for only linux. However, colab suitable notebook 'sent_bert_mnr_cli5_v2.ipynb' capable of running without a problem.
+## Note: Vector Similarity Search (ScaNN) has suitable distribution for only linux. However, colab suitable notebook 'sent_bert_mnr_cli5_v2.ipynb' is capable of running without a problem.
